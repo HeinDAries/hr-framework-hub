@@ -277,9 +277,8 @@ function Index() {
 
             <p className="mt-10 text-xl md:text-2xl text-neutral-300 leading-relaxed max-w-2xl">
               Building enterprise-grade HR infrastructure across{" "}
-              <span className="accent">4 SEA jurisdictions</span> from the ground up —
-              with no HRIS, minimal budget, and ~270 staff across drilling and mineral
-              exploration operations.
+              <span className="accent">4 SEA jurisdictions</span> from the ground up;
+              with no HRIS, minimal budget, and zero inherited systems.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
