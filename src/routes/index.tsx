@@ -309,8 +309,6 @@ function Index() {
             <div className="space-y-4 text-sm">
               {[
                 ["Coverage", "Laos · Myanmar · Thailand · Indonesia"],
-                ["Headcount", "~270 staff"],
-                ["Sector", "Drilling & Mineral Exploration"],
                 ["HRIS", "Built from scratch · no vendor"],
                 ["Systems", "9 · live"],
                 ["Modules", "89 · interactive + framework"],
