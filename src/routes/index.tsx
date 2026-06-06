@@ -312,7 +312,7 @@ function Index() {
                 ["Headcount", "~270 staff"],
                 ["Sector", "Drilling & Mineral Exploration"],
                 ["HRIS", "Built from scratch · no vendor"],
-                ["Systems", "11 · live"],
+                ["Systems", "9 · live"],
                 ["Modules", "89 · interactive + framework"],
               ].map(([k, v]) => (
                 <div key={k} className="flex justify-between gap-4 border-b hairline pb-3">
