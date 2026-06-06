@@ -487,17 +487,17 @@ function Index() {
                 {s.modules.map((m, i) => (
                   <a
                     key={m.name}
-                    href={HR_BASE}
+                    href={HR_BASE + m.path}
                     target="_blank"
                     rel="noreferrer"
-                    className="card-bg border hairline p-4 hover:border-neutral-500 transition group"
+                    className="card-bg border hairline p-4 hover:border-neutral-500 transition group flex flex-col"
                   >
                     <div className="flex items-start justify-between gap-3">
-                      <div className="flex-1">
+                      <div className="flex-1 min-w-0">
                         <div className="mono text-[10px] text-neutral-500 mb-1">
                           {s.code}.{String(i + 1).padStart(2, "0")}
                         </div>
-                        <div className="text-sm text-neutral-100 group-hover:text-white">
+                        <div className="text-sm text-neutral-100 group-hover:text-white font-medium">
                           {m.name}
                         </div>
                       </div>
@@ -510,6 +510,12 @@ function Index() {
                       >
                         {m.tag.toUpperCase()}
                       </span>
+                    </div>
+                    <p className="mt-3 text-xs text-neutral-500 leading-relaxed">
+                      {m.desc}
+                    </p>
+                    <div className="mt-3 pt-3 border-t hairline mono text-[10px] tracking-widest text-neutral-500 group-hover:accent">
+                      OPEN MODULE →
                     </div>
                   </a>
                 ))}
