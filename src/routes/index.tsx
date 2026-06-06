@@ -8,13 +8,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "HR Operating Framework built across Laos, Myanmar, Thailand & Indonesia — 11 systems, 89 modules. CHRO-track portfolio of Ba Hein Kyaw.",
+          "HR Operating Framework built across Laos, Myanmar, Thailand & Indonesia — 9 systems, 89 modules. CHRO-track portfolio of Ba Hein Kyaw.",
       },
       { property: "og:title", content: "Ba Hein Kyaw — CHRO-Track Portfolio" },
       {
         property: "og:description",
         content:
-          "Enterprise-grade HR infrastructure across 4 SEA jurisdictions. 11 systems · 89 modules · multi-country operations.",
+          "Enterprise-grade HR infrastructure across 4 SEA jurisdictions. 9 systems · 89 modules · multi-country operations.",
       },
     ],
     links: [
@@ -202,40 +202,6 @@ const SYSTEMS: System[] = [
       { name: "OD Governance", tag: "Framework", path: "9_od_governance.html", desc: "Governance structures, approval frameworks, and accountability mechanisms for OD decisions." },
     ],
   },
-  {
-    id: "s10",
-    code: "S10",
-    title: "HR Technology",
-    tier: "Enterprise Infrastructure",
-    summary: "HR tech stack, integration, governance, ROI, and adoption.",
-    modules: [
-      { name: "Systems Inventory", tag: "Interactive", path: "1_hrtech-tool1-systems-inventory.html", desc: "Complete catalogue of all HR technology systems, owners, and integration dependencies." },
-      { name: "Integration & Dataflow", tag: "Framework", path: "2_hrtech-tool2-integration-dataflow.html", desc: "System integration mapping, data flow architecture, and API dependency documentation." },
-      { name: "Vendor Evaluation", tag: "Framework", path: "3_hrtech-tool3-vendor-evaluation.html", desc: "Structured vendor assessment framework with scoring criteria and shortlisting methodology." },
-      { name: "Data Governance", tag: "Framework", path: "4_hrtech-tool4-data-governance.html", desc: "HR data governance policies, access controls, privacy compliance, and retention schedules." },
-      { name: "HR Tech Roadmap", tag: "Framework", path: "5_hrtech-tool5-roadmap.html", desc: "Multi-year HR technology transformation roadmap with prioritisation and investment phasing." },
-      { name: "ROI & Business Case", tag: "Framework", path: "6_hrtech-tool6-roi-business-case.html", desc: "Business case templates and ROI modelling tools for HR technology investment proposals." },
-      { name: "Automation & AI", tag: "Framework", path: "7_hrtech-tool7-automation-ai.html", desc: "HR automation opportunity mapping and AI use case assessment for people processes." },
-      { name: "Adoption & Change", tag: "Framework", path: "8_hrtech-tool8-adoption-change.html", desc: "Technology adoption playbook with change management, training, and user readiness frameworks." },
-      { name: "Tech Operating Model", tag: "Framework", path: "9_hrtech-tool9-operating-model.html", desc: "HR technology operating model covering ownership, support tiers, and service delivery roles." },
-    ],
-  },
-  {
-    id: "s11",
-    code: "S11",
-    title: "Centre of Excellence",
-    tier: "Enterprise Infrastructure",
-    summary: "CoE operating model, standards, governance, and HR function maturity.",
-    modules: [
-      { name: "CoE Operating Model", tag: "Framework", path: "1_coe_operating_model.html", desc: "Centre of Excellence design principles, operating model, and HR function architecture." },
-      { name: "Standards Register", tag: "Interactive", path: "2_coe_policy_register.html", desc: "Enterprise HR standards, policy register, and cross-functional compliance accountability matrix." },
-      { name: "Knowledge Management", tag: "Framework", path: "3_coe_knowledge_management.html", desc: "HR knowledge capture, institutional memory systems, and best practice dissemination tools." },
-      { name: "Governance & Decision Rights", tag: "Framework", path: "4_coe_governance.html", desc: "HR governance structure, RACI frameworks, and decision rights across the function." },
-      { name: "Framework Lifecycle", tag: "Framework", path: "5_coe_framework_lifecycle.html", desc: "Review cadence, version control, and lifecycle management for all HR frameworks and tools." },
-      { name: "Innovation Tracker", tag: "Interactive", path: "6_coe_innovation_tracker.html", desc: "HR innovation pipeline tracking new initiatives, pilots, and continuous improvement projects." },
-      { name: "HR Maturity Model", tag: "Framework", path: "7_coe_7_maturity_model.html", desc: "HR function maturity assessment across all eleven practice areas with advancement roadmap." },
-    ],
-  },
 ];
 
 const TIERS = [
@@ -251,8 +217,6 @@ function Index() {
       document.documentElement.style.scrollBehavior = "";
     };
   }, []);
-
-  const totalModules = SYSTEMS.reduce((n, s) => n + s.modules.length, 0);
 
   return (
     <div
@@ -304,13 +268,6 @@ function Index() {
       <section className="max-w-7xl mx-auto px-6 pt-20 pb-24">
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-8">
-              <span className="h-2 w-2 rounded-full bg-green-400 pulse-dot" />
-              <span className="mono text-xs tracking-widest text-green-400">
-                OPEN TO CHRO-TRACK ROLES · SEA
-              </span>
-            </div>
-
             <h1 className="text-5xl md:text-7xl font-semibold text-white tracking-tight leading-[1.05]">
               Ba Hein Kyaw
             </h1>
@@ -355,7 +312,7 @@ function Index() {
                 ["Headcount", "~270 staff"],
                 ["Sector", "Drilling & Mineral Exploration"],
                 ["HRIS", "Built from scratch · no vendor"],
-                ["Systems", "11 · live"],
+                ["Systems", "9 · live"],
                 ["Modules", "89 · interactive + framework"],
               ].map(([k, v]) => (
                 <div key={k} className="flex justify-between gap-4 border-b hairline pb-3">
@@ -380,8 +337,8 @@ function Index() {
       <section className="border-y hairline bg-black/30">
         <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-3 divide-x divide-white/10">
           {[
-            ["11", "Systems"],
-            [String(totalModules), "Modules"],
+            ["9", "Systems"],
+            ["89", "Modules"],
             ["4", "Countries"],
           ].map(([n, l]) => (
             <div key={l} className="text-center px-4">
@@ -405,12 +362,12 @@ function Index() {
               HR Operating Framework
             </h2>
             <p className="mt-3 text-neutral-400 max-w-2xl">
-              Eleven integrated systems organized across three tiers — from
+              Nine integrated systems organized across three tiers — from
               transactional foundations to enterprise architecture.
             </p>
           </div>
           <div className="mono text-[11px] tracking-widest text-neutral-500">
-            11 SYSTEMS · {totalModules} MODULES
+            9 SYSTEMS · 89 MODULES
           </div>
         </div>
 
