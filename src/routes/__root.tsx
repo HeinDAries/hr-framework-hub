@@ -80,6 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Lovable App" },
       { name: "description", content: "Showcases a CHRO's HR operating framework, demonstrating enterprise-grade infrastructure built across multiple SEA jurisdictions." },
       { name: "author", content: "Lovable" },
+      { name: "theme-color", content: "#0F172A" },
       { property: "og:title", content: "Lovable App" },
       { property: "og:description", content: "Showcases a CHRO's HR operating framework, demonstrating enterprise-grade infrastructure built across multiple SEA jurisdictions." },
       { property: "og:type", content: "website" },
@@ -94,6 +95,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "manifest",
+        href: "/manifest.json",
+      },
+      {
+        rel: "apple-touch-icon",
+        href: "/icon-192.png",
+        sizes: "192x192",
       },
     ],
   }),
